@@ -1,128 +1,142 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Required:
+"set runtimepath^=/Users/vincent/.vim/.cache/repos/github.com/Shougo/dein.vim
+set runtimepath^=/Users/vincent/.vim/bundle/repos/github.com/Shougo/dein.vim
 
-" let Vundle manage Vundle
-" required!
-Plugin 'gmarik/Vundle.vim'
+" Required:
+call dein#begin(expand('/Users/vincent/.vim/bundle'))
+
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
+
+" Add or remove your plugins here:
+" call dein#add('Shougo/neosnippet.vim')
+" call dein#add('Shougo/neosnippet-snippets')
 
 "------------------
 " Code Completions
 "------------------
-" Plugin 'Shougo/neocomplcache'
-Plugin 'Shougo/neocomplete'
-Plugin 'mattn/emmet-vim'
-"Plugin 'Raimondi/delimitMate'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'ervandew/supertab'
+call dein#add('Shougo/neocomplete')
+call dein#add('mattn/emmet-vim')
+call dein#add('jiangmiao/auto-pairs')
+call dein#add('ervandew/supertab')
 " snippets
-" Plugin 'garbas/vim-snipmate'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-"------ snipmate dependencies -------
-"Plugin 'MarcWeber/vim-addon-mw-utils'
-"Plugin 'tomtom/tlib_vim'
+call dein#add('SirVer/ultisnips')
+call dein#add('honza/vim-snippets')
 
 "-----------------
 " Fast navigation
 "-----------------
-Plugin 'edsono/vim-matchit'
-"Plugin 'Lokaltog/vim-easymotion'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'haya14busa/incsearch.vim'
-Plugin 'haya14busa/incsearch-fuzzy.vim'
-Plugin 'haya14busa/incsearch-easymotion.vim'
+call dein#add('edsono/vim-matchit')
+call dein#add('easymotion/vim-easymotion')
+call dein#add('haya14busa/incsearch.vim')
+call dein#add('haya14busa/incsearch-fuzzy.vim')
+call dein#add('haya14busa/incsearch-easymotion.vim')
 
 "--------------
 " Fast editing
 "--------------
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'sjl/gundo.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'vim-scripts/argtextobj.vim'
-"Plugin 'bkad/CamelCaseMotion'
-"Plugin 'terryma/vim-multiple-cursors'
+call dein#add('tpope/vim-surround')
+call dein#add('scrooloose/nerdcommenter')
+call dein#add('sjl/gundo.vim')
+call dein#add('godlygeek/tabular')
+call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('vim-scripts/argtextobj.vim')
+"'bkad/CamelCaseMotion'
+"'terryma/vim-multiple-cursors'
 
 
 "--------------
 " IDE features
 "--------------
-Plugin 'scrooloose/nerdtree'
-"Plugin 'humiaozuzu/TabBar'
-Plugin 'majutsushi/tagbar'
-Plugin 'mileszs/ack.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-"Plugin 'Lokaltog/vim-powerline'
-Plugin 'vim-airline/vim-airline'
-Plugin 'scrooloose/syntastic'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'maksimr/vim-jsbeautify'
+call dein#add('scrooloose/nerdtree')
+call dein#add('majutsushi/tagbar')
+call dein#add('mileszs/ack.vim')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('tpope/vim-fugitive')
+call dein#add('vim-airline/vim-airline')
+call dein#add('scrooloose/syntastic')
+call dein#add('bronson/vim-trailing-whitespace')
+call dein#add('fholgado/minibufexpl.vim')
+call dein#add('maksimr/vim-jsbeautify')
+"'humiaozuzu/TabBar'
 
 "-------------
 " Other Utils
 "-------------
-" Plugin 'humiaozuzu/fcitx-status'
-Plugin 'nvie/vim-togglemouse'
+call dein#add('nvie/vim-togglemouse')
+"'humiaozuzu/fcitx-status'
 
 "----------------------------------------
 " Syntax/Indent for language enhancement
 "----------------------------------------
 "------- web backend ---------
-"Plugin '2072/PHP-Indenting-for-VIm'
-"Plugin 'tpope/vim-rails'
-"Plugin 'lepture/vim-jinja'
-Plugin 'digitaltoad/vim-jade'
+"'2072/PHP-Indenting-for-VIm'
+"'tpope/vim-rails'
+"'lepture/vim-jinja'
+call dein#add('digitaltoad/vim-jade')
 
 "------- web frontend ----------
-Plugin 'othree/html5.vim'
-" Plugin 'tpope/vim-haml'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'nono/jquery.vim'
-Plugin 'groenewege/vim-less'
-" Plugin 'wavded/vim-stylus'
-" Plugin 'nono/vim-handlebars'
+call dein#add('othree/html5.vim')
+call dein#add('pangloss/vim-javascript')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('nono/jquery.vim')
+call dein#add('groenewege/vim-less')
+" 'wavded/vim-stylus'
+" 'nono/vim-handlebars'
+" 'tpope/vim-haml'
 
 "------- markup language -------
-"Plugin 'tpope/vim-markdown'
-" Plugin 'timcharper/textile.vim'
+"'tpope/vim-markdown'
+"'timcharper/textile.vim'
 
 "------- Ruby --------
-" Plugin 'tpope/vim-endwise'
+"'tpope/vim-endwise'
 
 "------- Go ----------
-Plugin 'fatih/vim-go'
+call dein#add('fatih/vim-go')
 
 "------- FPs ------
-" Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'luochen1990/rainbow'
-" Plugin 'wlangstroth/vim-racket'
-" Plugin 'vim-scripts/VimClojure'
-" Plugin 'rosstimson/scala-vim-support'
+call dein#add('luochen1990/rainbow')
+" 'wlangstroth/vim-racket'
+" 'vim-scripts/VimClojure'
+" 'rosstimson/scala-vim-support'
 
 "------- Recat ------
-Plugin 'mxw/vim-jsx'
+call dein#add('mxw/vim-jsx')
 
 "--------------
 " Color Schemes
 "--------------
-Plugin 'rickharris/vim-blackboard'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'rickharris/vim-monokai'
-Plugin 'tpope/vim-vividchalk'
-Plugin 'Lokaltog/vim-distinguished'
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'fisadev/fisa-vim-colorscheme'
+call dein#add('rickharris/vim-blackboard')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('rickharris/vim-monokai')
+call dein#add('tpope/vim-vividchalk')
+call dein#add('Lokaltog/vim-distinguished')
+call dein#add('chriskempson/vim-tomorrow-theme')
+call dein#add('fisadev/fisa-vim-colorscheme')
 
 "------ Airline ------
-Plugin 'vim-airline/vim-airline-themes'
+call dein#add('vim-airline/vim-airline-themes')
 
+" You can specify revision/branch/tag.
+" call dein#add('Shougo/vimshell', { 'rev': '3787e5'  })
 
-call vundle#end()
-filetype plugin indent on     " required!
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------"
+

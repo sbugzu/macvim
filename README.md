@@ -24,7 +24,7 @@
 ` brew install the_silver_searcher `
 
 
-安装[syntastic](#plu_syntastic)语法检查工具
+安装 [syntastic](#plu_syntastic) 语法检查工具
 
 ```
 npm  install  -g  csslint       #  CSS
@@ -51,22 +51,27 @@ git clone https://github.com/sbugzu/macvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
-### 安装 Vundle 管理插件的插件 🤔
+### 安装 dein.vim 管理插件的插件 🤔
 
-`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+```
+cd ~/.vim
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.vim/bundle
+rm install.sh
+```
 
 ### 安装插件（依赖网络环境，会比较耗时 ☕️）
 
-`mvim -c VundleInstall -c quitall`
+`mvim -c "call dein#install()" -c quitall`
 
 以后可通过以下命令更新插件
 
-`mvim -c VundleUpdate -c quitall`
+`mvim -c "call dein#update()" -c quitall`
 
 ## 插件列表
 
-### vundle:
-[http://github.com/VundleVim/Vundle.vim]()
+### dein.vim
+[https://github.com/Shougo/dein.vim]()
 
 管理插件的插件
 
@@ -217,21 +222,25 @@ ln -s ~/.vim/vimrc ~/.vimrc
 
 ### gundo
 [http://github.com/sjl/gundo.vim]()
+
 可视化的撤消树
 
 
 ### tabular [⌨](#key_tabular)
 [https://github.com/godlygeek/tabular]()
+
 通过冒号、分号、空格等进行格式化。
 
 ### vim-indent-guides
 [https://github.com/nathanaelkane/vim-indent-guides]()
+
 提供更好的缩进格式化效果
 
 ![vim-indent-guides screenshot](https://camo.githubusercontent.com/2bc9669a79de6da7eca9e3f3efdf2d4b891dd7c5/687474703a2f2f692e696d6775722e636f6d2f457672714b2e706e67)
 
 ### argtextobj.vim
 [https://github.com/vim-scripts/argtextobj.vim]()
+
 除自带的 `w s p '' "" <> [] () {} t` 以外提供 `a` 标识参数文本对象
 
 `function foo ( abc, ef*g, hij ) { //do something }`
@@ -249,8 +258,8 @@ ln -s ~/.vim/vimrc ~/.vimrc
 提供可视化的文件树并集成进行一些简单的文件系统操作。
 
 
-### tagbar
 <a name="plu_tagbar"></a>
+### tagbar
 [https://github.com/majutsushi/tagbar]()
 
 通过 [ctags](http://ctags.sourceforge.net/) 获取当前文件的结构，但只会加载到内存中，不会生成 tags 文件也不具备管理 tags 文件的功能。如果需要管理 tags 文件可以尝试 [vim-easytags](https://github.com/xolox/vim-easytags)。
@@ -284,8 +293,8 @@ ln -s ~/.vim/vimrc ~/.vimrc
 ![vim-airline screenshot](https://github.com/vim-airline/vim-airline/wiki/screenshots/demo.gif)
 
 
-### syntastic
 <a name="plu_syntastic"></a>
+### syntastic
 [https://github.com/scrooloose/syntastic]()
 
 强大的语法检查插件
