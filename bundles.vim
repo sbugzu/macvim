@@ -43,15 +43,19 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'sjl/gundo.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'vim-scripts/argtextobj.vim'
+"Plugin 'bkad/CamelCaseMotion'
+"Plugin 'terryma/vim-multiple-cursors'
+
 
 "--------------
 " IDE features
 "--------------
 Plugin 'scrooloose/nerdtree'
-Plugin 'humiaozuzu/TabBar'
+"Plugin 'humiaozuzu/TabBar'
 Plugin 'majutsushi/tagbar'
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'Lokaltog/vim-powerline'
 Plugin 'vim-airline/vim-airline'
@@ -86,7 +90,7 @@ Plugin 'groenewege/vim-less'
 " Plugin 'nono/vim-handlebars'
 
 "------- markup language -------
-Plugin 'tpope/vim-markdown'
+"Plugin 'tpope/vim-markdown'
 " Plugin 'timcharper/textile.vim'
 
 "------- Ruby --------

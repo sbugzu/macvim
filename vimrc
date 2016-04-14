@@ -125,6 +125,8 @@ let g:rainbow_conf = {
     \       'css': 0,
     \   }
     \}
+" fixed vim-javascript compatibility
+autocmd FileType javascript syntax clear jsFuncBlock
 
 " tabbar
 let g:Tb_MaxSize = 2
@@ -215,12 +217,21 @@ noremap <silent><expr> z/ incsearch#go(<SID>config_easyfuzzymotion())
 noremap <silent><expr> z? incsearch#go(<SID>config_easyfuzzymotion({'command': '?'}))
 noremap <silent><expr> zg? incsearch#go(<SID>config_easyfuzzymotion({'is_stay': 1}))
 
+" vim-indent-guides
+if has("gui_running")
+    let g:indent_guides_enable_on_vim_startup = 1
+endif
+" let g:indent_guides_auto_colors = 0
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=4
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 2
 
 " jsx
 let g:jsx_ext_required = 0
 
 " Tagbar
-let g:tagbar_ctags_bin='/usr/bin/ctags'
+"let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 let g:tagbar_left=1
 let g:tagbar_width=30
 let g:tagbar_autofocus = 1
@@ -379,6 +390,26 @@ set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_S
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 :command Ctrlp CtrlPBuffer
 
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+" Tabularize
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a<Space> :Tabularize / \zs<CR>
+vmap <Leader>a<Space> :Tabularize / \zs<CR>
+
 " MiniBufExpl
 "let g:miniBufExplorerAutoStart=1
 let g:miniBufExplBuffersNeeded = 1
@@ -386,6 +417,7 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
+let g:miniBufExplCycleArround = 1
 noremap <C-TAB>   :MBEbn<CR>
 noremap <C-S-TAB> :MBEbp<CR>
 
@@ -414,7 +446,7 @@ nmap <F6> :NERDTreeToggle<cr>
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 nmap  <D-/> :
-nnoremap <leader>a :Ack
+"nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
 
 " switching to buffer 1 - 9 is mapped to ,[nOfBuffer]
