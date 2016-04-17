@@ -1,7 +1,10 @@
 # macvim
 
 个人用于 MacVim 的配置，基于 [humiaozuzu/dot-vimrc](https://github.com/humiaozuzu/dot-vimrc) 修改。
-该配置主要功能偏向 HTML5、NodeJS、React 等相关技术。
+该配置主要偏重于 HTML5、NodeJS、React 等相关研发。
+
+![MacVim screenshot1](https://raw.githubusercontent.com/sbugzu/macvim/master/screenshots/screenshot1.png)
+![MacVim screenshot2](https://raw.githubusercontent.com/sbugzu/macvim/master/screenshots/screenshot2.png)
 
 ## 安装准备
 
@@ -33,6 +36,16 @@ npm  install  -g  csslint       #  CSS
 npm  install  -g  jshint        #  Javascript
 npm  install  -g  jsonlint      #  Json
 sudo pip install pyflakes       #  Python
+```
+
+为了在 jshint 中支持使用 ES6 语法，可在项目根目录或者 `~` 路径下增加 `.jshintrc` 的文件并写入以下内容：
+
+```
+{
+    "undef":      true,
+    "unused":     true,
+    "esversion":  6
+}
 ```
 
 ## 安装
