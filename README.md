@@ -1,6 +1,8 @@
 # macvim
 
 个人用于 MacVim 的配置，基于 [humiaozuzu/dot-vimrc](https://github.com/humiaozuzu/dot-vimrc) 修改。
+该配置主要功能偏向 HTML5、NodeJS、React 等相关技术。
+
 ## 安装准备
 
 ### 安装 MacVim
