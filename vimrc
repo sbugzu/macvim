@@ -1,4 +1,4 @@
-source ~/.vim/bundles.vim
+source ~/.vim/plugs.vim
 
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
@@ -271,6 +271,19 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeShowBookmarks=1
 let NERDTreeWinPos = "right"
 
+" git nerd tree
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
 " nerdcommenter
 let NERDSpaceDelims=1
 " nmap <D-/> :NERDComToggleComment<cr>
@@ -526,3 +539,4 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+source ~/.vim/custom

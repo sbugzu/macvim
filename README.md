@@ -1,7 +1,8 @@
 # macvim
 
 个人用于 MacVim 的配置，基于 [humiaozuzu/dot-vimrc](https://github.com/humiaozuzu/dot-vimrc) 修改。
-该配置主要偏重于 HTML5、NodeJS、React 等相关研发。
+
+该配置可直接普通使用，插件主要偏重于 HTML5、NodeJS、React 等。
 
 ![MacVim screenshot1](https://raw.githubusercontent.com/sbugzu/macvim/master/screenshots/screenshot1.png)
 ![MacVim screenshot2](https://raw.githubusercontent.com/sbugzu/macvim/master/screenshots/screenshot2.png)
@@ -38,7 +39,7 @@ npm  install  -g  jsonlint      #  Json
 sudo pip install pyflakes       #  Python
 ```
 
-为了在 jshint 中支持使用 ES6 语法，可在项目根目录或者 `~` 路径下增加 `.jshintrc` 的文件并写入以下内容：
+为了在使用 [jshint](http://jshint.com/) 时能支持 ES6 语法，可在项目根目录或者 `~` 路径下增加 `.jshintrc` 的文件并写入以下内容：
 
 ```
 {
@@ -66,27 +67,27 @@ git clone https://github.com/sbugzu/macvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
-### 安装 dein.vim 管理插件的插件 🤔
+### 安装 vim-plug 管理插件的插件
+
+参考：[junegunn/vim-plug](https://github.com/junegunn/vim-plug)
 
 ```
-cd ~/.vim
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.vim/bundle
-rm install.sh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ### 安装插件（依赖网络环境，会比较耗时 ☕️）
 
-`mvim -c "call dein#install()" -c quitall`
+`mvim -c PlugInstall -c quitall`
 
 以后可通过以下命令更新插件
 
-`mvim -c "call dein#update()" -c quitall`
+`mvim -c PlugUpdate -c quitall`
 
 ## 插件列表
 
-### dein.vim
-[https://github.com/Shougo/dein.vim]()
+### vim-plug
+[https://github.com/junegunn/vim-plug]()
 
 管理插件的插件
 
@@ -268,9 +269,26 @@ rm install.sh
 
 ` y d c v`
 
+### repeat
+[https://github.com/tpope/vim-repeat]()
+
+使 `.` 可重复一个插件操作
+
+
+### wildfire
+[https://github.com/gcmt/wildfire.vim]()
+
+快速选择文本对象
+
 ### nerdtree
+[https://github.com/scrooloose/nerdtree]()
 
 提供可视化的文件树并集成进行一些简单的文件系统操作。
+
+### nerdtree-git-plugin
+[https://github.com/Xuyuanp/nerdtree-git-plugin]()
+
+在 nerdtree 上显示 git 状态
 
 
 <a name="plu_tagbar"></a>
@@ -339,6 +357,12 @@ rm install.sh
 以彩虹色显示括号，类似 [rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
 
 
+### accelerated-smooth-scroll
+[https://github.com/yonchu/accelerated-smooth-scroll]()
+
+平滑滚动插件
+
+
 ## 快捷键
 
 `<leader>` 定义为 `,`
@@ -365,7 +389,7 @@ rm install.sh
 | `<F6>`             | 切换 NERDTree                   |                                                               |
 | `<F12>`            | 使鼠标在 Vim 和 Terminal 间切换 | vim-togglemouse <a href="" name="key_vim-togglemouse"></a>    |
 | `<D-/>`            | `:`                             |                                                               |
-| `<leader>v`        | `V\`]`                          |                                                               |
+| `<leader>v`        | `V\\`]`                          |                                                               |
 | `<C-j>`            | 切换下方窗口                    |                                                               |
 | `<C-k>`            | 切换上方窗口                    |                                                               |
 | `<C-h>`            | 切换左侧窗口                    |                                                               |
@@ -374,4 +398,5 @@ rm install.sh
 | `<leader>sv`       | 重新加载 .vimrc 文件            |                                                               |
 | `<D-]>`            | 增加缩进                        |                                                               |
 | `<D-[>`            | 减小缩进                        |                                                               |
+| `;`            | 等同于 `:` 切换模式 |                                                               |
 
