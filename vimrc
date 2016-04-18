@@ -78,29 +78,6 @@ let mapleader=","
 "-----------------
 " Plugin settings
 "-----------------
-" Rainbow parentheses for Lisp and variants
-" let g:rbpt_colorpairs = [
-    " \ ['brown',       'RoyalBlue3'],
-    " \ ['Darkblue',    'SeaGreen3'],
-    " \ ['darkgray',    'DarkOrchid3'],
-    " \ ['darkgreen',   'firebrick3'],
-    " \ ['darkcyan',    'RoyalBlue3'],
-    " \ ['darkred',     'SeaGreen3'],
-    " \ ['darkmagenta', 'DarkOrchid3'],
-    " \ ['brown',       'firebrick3'],
-    " \ ['gray',        'RoyalBlue3'],
-    " \ ['black',       'SeaGreen3'],
-    " \ ['darkmagenta', 'DarkOrchid3'],
-    " \ ['Darkblue',    'firebrick3'],
-    " \ ['darkgreen',   'RoyalBlue3'],
-    " \ ['darkcyan',    'SeaGreen3'],
-    " \ ['darkred',     'DarkOrchid3'],
-    " \ ['red',         'firebrick3'],
-    " \ ]
-" let g:rbpt_max = 16
-" autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
-
-
 " luochen1990/rainbow
 let g:rainbow_active = 1
 let g:rainbow_conf = {
@@ -292,28 +269,9 @@ let NERDCompactSexyComs=1
 " ZenCoding
 let g:user_emmet_expandabbr_key='<C-j>'
 
-" powerline
-"let g:Powerline_symbols = 'fancy'
-
 " airline
 let g:airline_powerline_fonts=1
 let g:airline#extension#tabline#enable=1
-
-
-" NeoComplCache
-"let g:neocomplcache_enable_at_startup=1
-"let g:neoComplcache_disableautocomplete=1
-"let g:neocomplcache_enable_underbar_completion = 1
-"let g:neocomplcache_enable_camel_case_completion = 1
-"let g:neocomplcache_enable_smart_case=1
-"let g:neocomplcache_min_syntax_length = 3
-"let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-"set completeopt-=preview
-
-" imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-" smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-" imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-" smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 
 
 " neocomplete
@@ -450,6 +408,11 @@ autocmd FileType json vnoremap <buffer> <D-ƒ> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <D-ƒ> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <D-ƒ> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <D-ƒ> :call RangeCSSBeautify()<cr>
+
+" accelerated-smooth-scroll
+g:ac_smooth_scroll_fb_sleep_time_msec = 5
+g:ac_smooth_scroll_du_sleep_time_msec = 5
+
 
 " Keybindings for plugin toggle
 nnoremap <F2> :set invpaste paste?<CR>
