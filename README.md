@@ -29,23 +29,40 @@
 
 ` brew install the_silver_searcher `
 
-
 安装 [syntastic](#plu_syntastic) 语法检查工具
 
 ```
-npm  install  -g  csslint       #  CSS
-npm  install  -g  jshint        #  Javascript
 npm  install  -g  jsonlint      #  Json
+npm  install  -g  csslint       #  CSS
+npm  install  -g  eslint        #  Javascript
+npm  install  -g  babel-eslint  #  ES6
+npm  install  -g  eslint-plugin-react # react
 sudo pip install pyflakes       #  Python
 ```
 
-为了在使用 [jshint](http://jshint.com/) 时能支持 ES6 语法，可在项目根目录或者 `~` 路径下增加 `.jshintrc` 的文件并写入以下内容：
+为了在使用 [eslint](http://eslint.org/) 时能支持 ES6 语法和 JSX，可在项目根目录或者 `~` 路径下增加 `.eslintrc` 的文件并写入以下内容，具体的规则设置可参考 [Rule](http://eslint.org/docs/rules/)：
 
 ```
 {
-    "undef":      true,
-    "unused":     true,
-    "esversion":  6
+  "parser": "babel-eslint",
+  "env": {
+      "browser": true,
+      "node": true
+  },
+  "settings": {
+      "ecmascript": 6,
+      "jsx": true
+  },
+    "extends": "eslint:recommended",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "strict":                "warn",
+        "no-unused-vars":        0,
+        "camelcase":             "warn",
+        "no-underscore-dangle":  "warn"
+    }
 }
 ```
 
@@ -76,7 +93,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-### 安装插件（依赖网络环境，会比较耗时 ☕️）
+### 安装插件（依赖网络环境，会比较耗时 :coffee:）
 
 `mvim -c PlugInstall -c quitall`
 

@@ -205,7 +205,7 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 2
 
 " jsx
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " Tagbar
 "let g:tagbar_ctags_bin='/usr/local/bin/ctags'
@@ -368,7 +368,9 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 
 
 " Tabularize
@@ -410,8 +412,8 @@ autocmd FileType html vnoremap <buffer> <D-ƒ> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <D-ƒ> :call RangeCSSBeautify()<cr>
 
 " accelerated-smooth-scroll
-g:ac_smooth_scroll_fb_sleep_time_msec = 5
-g:ac_smooth_scroll_du_sleep_time_msec = 5
+" g:ac_smooth_scroll_fb_sleep_time_msec = 5
+" g:ac_smooth_scroll_du_sleep_time_msec = 5
 
 
 " Keybindings for plugin toggle
