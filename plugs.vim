@@ -109,6 +109,7 @@ Plug 'tpope/vim-vividchalk'
 Plug 'Lokaltog/vim-distinguished'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'fisadev/fisa-vim-colorscheme'
+Plug 'ajh17/Spacegray.vim'
 
 "------ Airline ------
 Plug 'vim-airline/vim-airline-themes'

@@ -363,13 +363,17 @@ https://github.com/bronson/vim-trailing-whitespace
 以红色高亮显示结尾不必要的空格
 
 
-### minibufexpl.vim [⌨](#key_minibufexpl)
+### minibufexpl.vim [key](#key_minibufexpl)
 https://github.com/fholgado/minibufexpl.vim
 
 在屏幕顶部或者底部列出打开的所有 Buffer
 
+### vim-jsbeautify [key](#key_vim-jsbeautify)
+https://github.com/maksimr/vim-jsbeautify
 
-### vim-togglemouse [⌨](#key_vim-togglemouse)
+格式化 JS、JSON、HTML 等文件，可单独针对文件格式进行设置 [.editorconfig](https://github.com/sbugzu/macvim/blob/master/.editorconfig)
+
+### vim-togglemouse [key](#key_vim-togglemouse)
 https://github.com/nvie/vim-togglemouse
 
 在 Vim 和 Terminal 间切换鼠标
@@ -412,12 +416,12 @@ https://github.com/yonchu/accelerated-smooth-scroll
 | `<leader>010-0100` | 切换 10-100 的 Buffer           | minibufexpl                                                   |
 | `<C-TAB>`          | 向后切换 Buffer                 | minibufexpl                                                   |
 | `<C-S-TAB>`        | 向前切换 Buffer                 | minibufexpl                                                   |
+| `<D-f>`            | 自动格式化文件                  | vim-jsbeautify <a href="" name="key_vim-jsbeautify"></a>      |
 | `<F3>`             | 切换 Gundo                      |                                                               |
 | `<F4>`             | 切换 IndentGuides               |                                                               |
 | `<F5>`             | 切换 Tagbar                     |                                                               |
 | `<F6>`             | 切换 NERDTree                   |                                                               |
 | `<F12>`            | 使鼠标在 Vim 和 Terminal 间切换 | vim-togglemouse <a href="" name="key_vim-togglemouse"></a>    |
-| `<D-/>`            | `:`                             |                                                               |
 | `<leader>v`        | ``V`]``                         |                                                               |
 | `<C-j>`            | 切换下方窗口                    |                                                               |
 | `<C-k>`            | 切换上方窗口                    |                                                               |
@@ -427,5 +431,6 @@ https://github.com/yonchu/accelerated-smooth-scroll
 | `<leader>sv`       | 重新加载 .vimrc 文件            |                                                               |
 | `<D-]>`            | 增加缩进                        |                                                               |
 | `<D-[>`            | 减小缩进                        |                                                               |
+| `<D-/>`            | 等同于 `:` 切换模式             |                                                               |
 | `;`                | 等同于 `:` 切换模式             |                                                               |
 

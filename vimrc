@@ -15,7 +15,8 @@ syntax on
 " color scheme
 set background=dark
 " color solarized
-color Tomorrow-Night-Eighties
+" color Tomorrow-Night-Eighties
+color spacegray
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
