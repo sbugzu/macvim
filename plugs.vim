@@ -13,7 +13,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 "-----------------
 " Fast navigation
 "-----------------
-Plug 'edsono/vim-matchit'
+Plug 'andymass/vim-matchup'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
@@ -44,7 +44,7 @@ Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'maksimr/vim-jsbeautify'
